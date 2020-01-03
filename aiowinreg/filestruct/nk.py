@@ -93,7 +93,7 @@ class NTRegistryNK:
 		encoding = 'ascii' if NKFlag.ASCII_NAME in nk.flags else 'utf-16-le'
 		try:
 			nk.name = buff.read(nk.name_length)
-			nk.name = nk.name.decode(encoding)
+			nk.name = nk.name.decode('cp1252')
 		except Exception as e:
 			raise e
 
